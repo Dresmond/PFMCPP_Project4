@@ -31,9 +31,85 @@
 
  Wait for my code review.
  */
+struct FloatType
+{
+    // Project 4 - Part 1 /9, Returning float Values
+ 
+ 	float add( float lhs, float rhs ) 	        { return lhs + rhs; }
+ 	float subtract( float lhs, float rhs )      { return lhs - rhs; }
+	float multiply( float lhs, float rhs )      { return lhs * rhs; }
+	float divide( float lhs, float rhs )        { return lhs / rhs; }
+};
+ 
+struct DoubleType
+{
+    // Project 4 - Part 1 /9, Returning Values 
 
+    double add( double lhs, double rhs )        { return lhs + rhs; } 
+	double subtract( double lhs, double rhs )   { return lhs - rhs; } 
+    double multiply( double lhs, double rhs )   { return lhs * rhs; }  
+    double divide( double lhs, double rhs )     { return lhs / rhs; }  
+};
+ 
+struct IntType
+{
+    // Project 4 - Part 1 /9, Returning Values
+ 
+ 	int add( int lhs, int rhs )                { return lhs + rhs; }
+ 	int subtract( int lhs, int rhs )           { return lhs - rhs; }              
+	int multiply( int lhs, int rhs )           { return lhs * rhs; }
+	int divide( int lhs, int rhs )             { return lhs / rhs; }
+};
+ 
 #include <iostream>
 int main()
-{
+{   
+    // instantiate UDT(s) 
+    FloatType ft1;
+    DoubleType dt1;
+    IntType it1;
+
+    // exercise FloatType UDT
+    
+    auto resultf1Add = ft1.add(3.14f, 3.14f);
+    std::cout << "result of ft1.add(): " << resultf1Add << std::endl;
+    
+    auto resultf1Sub = ft1.subtract(3.14f, 3.14f);
+    std::cout << "result of ft1.subtract(): " << resultf1Sub << std::endl;
+    
+    auto resultf1Mult = ft1.multiply(3.14f, 3.14f);
+    std::cout << "result of ft1.multiply(): " << resultf1Mult << std::endl;
+
+    auto resultf1Div = ft1.divide(3.14f, 3.14f);
+    std::cout << "result of ft1.divide(): " << resultf1Div << std::endl;
+
+    // exercise DoubleType UDT
+
+    auto resultd1Add = dt1.add(3.14, 3.14); 
+    std::cout << "result of dt1.add(): " << resultd1Add << std::endl;
+    
+    auto resultd1Sub = dt1.subtract(3.14, 3.14);
+    std::cout << "result of dt1.subtract(): " << resultd1Sub << std::endl;
+    
+    auto resultd1Mult = dt1.multiply(3.14, 3.14);
+    std::cout << "result of dt1.multiply(): " << resultd1Mult << std::endl;
+
+    auto resultd1Div = dt1.divide(3.14, 3.14);
+    std::cout << "result of dt1.divide(): " << resultd1Div << std::endl;
+
+   // exercise IntType UDT
+
+    auto resulti1Add = it1.add(314, 314); 
+    std::cout << "result of it1.add(): " << resulti1Add << std::endl;
+    
+    auto resulti1Sub = it1.subtract(314, 314);
+    std::cout << "result of it1.subtract(): " << resulti1Sub << std::endl;
+    
+    auto resulti1Mult = it1.multiply(314, 314);
+    std::cout << "result of it1.multiply(): " << resulti1Mult << std::endl;
+
+    auto resulti1Div = it1.divide(314, 314);
+    std::cout << "result of it1.divide(): " << resulti1Div << std::endl;
+
     std::cout << "good to go!" << std::endl;
 }
